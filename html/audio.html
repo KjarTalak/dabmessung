@@ -1,0 +1,323 @@
+<!DOCTYPE html> <html>
+    <head>
+        <title>DAB-Messung</title>
+        <meta charset="UTF-8"> <style> body {
+    background-color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+th#dls {
+     width: 300px;
+}
+table#servicetable tr:nth-child(even) {
+    background-color: white;
+}
+table#servicetable tr:nth-child(odd) {
+    background-color: #eee;
+}
+table#servicetable th {
+    color: white;
+    background-color: #444;
+}
+table#ensembletable tr:nth-child(even) {
+    background-color: white;
+}
+table#ensembletable tr:nth-child(odd) {
+    background-color: #eee;
+}
+table#ensembletable th {
+    color: white;
+    background-color: #444;
+}
+table#tiitable tr:nth-child(even) {
+    background-color: white;
+}
+table#tiitable tr:nth-child(odd) {
+    background-color: #eee;
+}
+table#tiitable th {
+    color: white;
+    background-color: #444;
+}
+button {
+    background-color: #0022FF;
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 7pt;
+    border-radius: 4px;
+}
+canvas {
+    border: 1px solid #d3d3d3;
+}
+.chevron {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    float: left;
+}
+.slide-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9);
+}
+.slide-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+}
+#slidecaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+.slideclose {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.slideclose:hover, .slideclose:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+    </head>
+    <body>
+        <center><img src="dabmessung_logo.png" 
+alt="dabmessung"/></center>
+		<br>
+                <center>
+                        <b><a href="./index.html">HOME</a>&bull;<a href="./audio.html">AUDIO</a>&bull;<a href="./log/">LOG FILES</a>&bull;<a href="./system.html">SYSTEM</a>&bull;<a href="./network.html">NETWORK</a></b>
+                </center>
+		<br>
+		<center>
+		<table>
+		<tr>
+			<th>
+				<center>
+				<img src="./slide/54230" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3d6" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54211" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3c3" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54229" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3d5" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<center>
+				<img src="./slide/54210" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3c2" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54228" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3d4" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54999" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd6d7" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<center>
+				<img src="./slide/54977" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd6c1" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/55236" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd7c4" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/55233" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd7c1" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<center>
+				<img src="./slide/54721" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd5c1" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54465" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd4c1" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+				<img src="./slide/54227" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd3d3" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<center>
+				<img src="./slide/55745" width="270" 
+height="200" alt="SLIDE">
+				<br>
+				<audio controls preload="none">
+				<source 
+src="http://192.168.178.250:8080/mp3/0xd9c1" type="audio/mpeg">
+				Your browser does not support the audio 
+element.
+				</audio>
+				</center>
+			</th>
+			<th>
+				<center>
+                                <img src="./slide/5314" width="270" 
+height="200" alt="SLIDE">
+                                <br>
+                                <audio controls preload="none">
+                                <source 
+src="http://192.168.178.250:8080/mp3/0x14c2" type="audio/mpeg">
+                                Your browser does not support the audio
+element.
+                                </audio>
+
+				</center>
+			</th>
+			<th>
+				<center>
+				</center>
+			</th>
+		</tr>
+		</table>
+		</center>
+    </body> </html>
