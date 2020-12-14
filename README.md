@@ -3,9 +3,9 @@ example DAB-Messung Box
 
 How to install:
 
-sudo update-manager --proposed
-sudo apt-get install cockpit
-sudo apt-get install ssh git cmake libusb-1.0-0-dev build-essential
+	sudo update-manager --proposed
+	sudo apt-get install cockpit
+	sudo apt-get install ssh git cmake libusb-1.0-0-dev build-essential
 
 	sudo apt-get install apache2 libapache2-mod-php7.0 php7.0 php7.0-mysql mysql-server
 	
@@ -43,7 +43,7 @@ sudo apt-get install ssh git cmake libusb-1.0-0-dev build-essential
 	cd build
 
 
-sudo apt-get install python-pip python3-pip python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+	sudo apt-get install python-pip python3-pip python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
 
 	
 	sudo cp -r ./html_2/*.* /var/www/html/
